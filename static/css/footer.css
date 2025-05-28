@@ -1,0 +1,176 @@
+.footer {
+    background: var(--gradient-dark);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 60px 0 30px;
+    position: relative;
+}
+
+.footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: var(--gradient-primary);
+}
+
+.footer-brand h5 {
+    color: var(--text-light);
+    font-family: 'Orbitron', monospace;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.footer-brand i {
+    color: var(--primary-color);
+    animation: float 3s ease-in-out infinite;
+}
+
+.footer-description {
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+.footer-title {
+    color: var(--text-light);
+    font-weight: 600;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    position: relative;
+}
+
+.footer-title::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 30px;
+    height: 2px;
+    background: var(--gradient-primary);
+    border-radius: 2px;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.footer-links a:hover {
+    color: var(--accent-color);
+    transform: translateX(5px);
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--text-light);
+    border-radius: 50%;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 1.2rem;
+}
+
+.social-link:hover {
+    background: var(--gradient-primary);
+    color: var(--text-light);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.nasa-credit {
+    color: var(--text-light);
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.nasa-credit i {
+    color: var(--primary-color);
+}
+
+.footer-divider {
+    border: none;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    margin: 40px 0 20px;
+}
+
+.copyright {
+    color: var(--text-muted);
+    margin-bottom: 0;
+    font-size: 0.9rem;
+}
+
+.footer-quote {
+    color: var(--text-muted);
+    font-style: italic;
+    margin-bottom: 0;
+    font-size: 0.9rem;
+}
+
+.footer-quote i {
+    color: var(--accent-color);
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+    .footer {
+        padding: 40px 0 20px;
+    }
+    
+    .social-links {
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+    
+    .footer-title::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .text-md-end {
+        text-align: center !important;
+        margin-top: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .footer {
+        padding: 30px 0 15px;
+    }
+    
+    .social-link {
+        width: 40px;
+        height: 40px;
+        font-size: 1.1rem;
+    }
+    
+    .footer-brand h5 {
+        text-align: center;
+    }
+    
+    .footer-description {
+        text-align: center;
+    }
+}

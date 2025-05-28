@@ -1,0 +1,29 @@
+{% extends 'layouts/base.html' %}
+
+{% block content %}
+<section class="noticias-section">
+    <div class="section-header">
+        <h1 class="section-title">Últimas Noticias Astronómicas</h1>
+        <p class="section-subtitle">Descubre las novedades del universo</p>
+    </div>
+    
+    <div class="noticias-grid">
+        {% for noticia in noticias %}
+        <article class="noticia-card">
+            <div class="card-image-container">
+                <img src="{{ noticia.imagen }}" alt="{{ noticia.nombre }}" class="card-image">
+                <span class="card-date">{{ noticia.fecha }}</span>
+            </div>
+            <div class="card-content">
+                <h3 class="card-title">{{ noticia.nombre }}</h3>
+                <div class="card-footer">
+                    <a href="{{ noticia.link }}" target="_blank" class="card-link">
+                        Leer más <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </article>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}

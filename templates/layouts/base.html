@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Astrologic - Tu Portal del Universo{% endblock %}</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Estilos -->
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" href="{% static 'css/header.css' %}">
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <link rel="stylesheet" href="{% static 'css/noticias.css' %}">
+    <link rel="stylesheet" href="{% static 'css/nasa.css' %}">
+    <link rel="stylesheet" href="{% static 'css/galeria.css' %}">
+
+    {% block extra_css %}{% endblock %}
+</head>
+<body>
+    <!-- Include Header Component -->
+    {% include "includes/header.html" %}
+
+    <!-- Main Content -->
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <!-- Include Footer Component -->
+    {% include "includes/footer.html" %}
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- JS Files -->
+    <script src="{% static 'js/base.js' %}"></script>
+    <script src="{% static 'js/header.js' %}"></script>
+    <script src="{% static 'js/nasa.js' %}"></script>
+    <script src="{% static 'js/galeria.js' %}"></script>
+    {% block extra_js %}{% endblock %}
+</body>
+</html>

@@ -1,0 +1,39 @@
+
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="{% url 'inicio' %}">
+            <i class="fas fa-rocket me-2"></i>
+            <span class="brand-text">Astrologic</span>
+        </a>
+        
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'inicio' %}">
+                        <i class="fas fa-home me-1"></i>Inicio
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'noticias' %}">
+                        <i class="fas fa-newspaper me-1"></i>Noticias Galácticas
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'imagenes_nasa' %}">
+                        <i class="fas fa-camera me-1"></i>Imagen del Día
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'galeria' %}">
+                        <i class="fa-solid fa-star"></i> Galeria
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

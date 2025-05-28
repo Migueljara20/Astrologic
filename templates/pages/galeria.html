@@ -1,0 +1,25 @@
+{% extends "layouts/base.html" %}
+
+{% block content %}
+<section class="gallery-section">
+    <div class="section-header">
+        <h1 class="section-title">Galería Astronómica</h1>
+        <p class="section-subtitle">Explora las maravillas del cosmos a través de nuestra colección</p>
+    </div>
+
+    <div class="gallery-container">
+        {% for img in imagenes %}
+        <div class="card">
+            <img src="{{ img.imagen }}" alt="{{ img.titulo }}" onclick="openModal(this.src, this.alt)">
+            <div class="card-content">
+                <h2>{{ img.titulo }}</h2>
+                <p>{{ img.descripcion }}</p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    <!-- Modal -->
+    <div id="imageModal" class="modal"></div>
+</section>
+{% endblock %}

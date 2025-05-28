@@ -1,0 +1,49 @@
+{% extends 'layouts/base.html' %}
+
+{% block content %}
+<section class="nasa-section">
+    <div class="section-header">
+        <h1 class="section-title">Imágenes Astronómicas del Día</h1>
+        <p class="section-subtitle">Descubre el universo a través de los ojos de la NASA</p>
+    </div>
+
+    <div class="nasa-gallery">
+        {% for imagen in imagenes %}
+        <article class="nasa-card">
+            <div class="card-header">
+                <h3 class="card-title">{{ imagen.title }}</h3>
+                <span class="card-date">{{ imagen.date }}</span>
+            </div>
+            
+            <div class="card-media">
+                {% if imagen.media_type == "image" %}
+                <img src="{{ imagen.url }}" alt="{{ imagen.title }}" class="card-image" loading="lazy">
+                {% else %}
+                <div class="media-placeholder">
+                    <i class="fas fa-video"></i>
+                    <p>Contenido multimedia disponible</p>
+                </div>
+                {% endif %}
+            </div>
+            
+            <div class="card-body">
+                <div class="card-description">
+                    <p class="short-text">{{ imagen.explanation|truncatewords:30 }}</p>
+                    <p class="full-text hidden">{{ imagen.explanation }}</p>
+                </div>
+                <button class="toggle-btn" onclick="toggleText(this)">
+                    <span class="more">Ver más</span>
+                    <span class="less hidden">Ver menos</span>
+                </button>
+            </div>
+            
+            <div class="card-footer">
+                <a href="{{ imagen.hdurl|default:imagen.url }}" target="_blank" class="hd-link">
+                    <i class="fas fa-expand"></i> Ver en máxima resolución
+                </a>
+            </div>
+        </article>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}

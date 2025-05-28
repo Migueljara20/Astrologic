@@ -1,0 +1,71 @@
+<footer class="footer mt-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="footer-brand">
+                    <h5 class="d-flex align-items-center">
+                        <i class="fas fa-rocket me-2"></i>
+                        Astrologic
+                    </h5>
+                    <p class="footer-description">
+                        Tu portal definitivo para explorar el universo. Descubre las últimas noticias de astronomía 
+                        y maravíllate con las imágenes diarias del cosmos.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="col-lg-2 col-md-6 mb-4">
+                <h6 class="footer-title">Navegación</h6>
+                <ul class="footer-links">
+                    <li><a href="{% url 'inicio' %}">Inicio</a></li>
+                    <li><a href="{% url 'noticias' %}">Noticias</a></li>
+                    <li><a href="{% url 'imagenes_nasa' %}">Imagen del Día</a></li>
+                    <li><a href="{% url 'galeria' %}">Galeria</a></li>
+                </ul>
+            </div>
+            
+            <div class="col-lg-3 col-md-6 mb-4">
+                <h6 class="footer-title">Síguenos</h6>
+                <div class="social-links">
+                    <a href="#" class="social-link">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="col-lg-3 col-md-6 mb-4">
+                <h6 class="footer-title">Powered by</h6>
+                <p class="nasa-credit">
+                    <i class="fas fa-satellite me-1"></i>
+                    NASA API
+                </p>
+                <p class="footer-description small">
+                    Datos e imágenes proporcionados por la NASA
+                </p>
+            </div>
+        </div>
+        
+        <hr class="footer-divider">
+        
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <p class="copyright">&copy; 2024 Astrologic. Todos los derechos reservados.</p>
+            </div>
+            <div class="col-md-6 text-md-end">
+                <p class="footer-quote">
+                    <i class="fas fa-quote-left me-1"></i>
+                    "El cosmos está dentro de nosotros"
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>

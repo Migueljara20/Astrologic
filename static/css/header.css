@@ -1,0 +1,114 @@
+/* Header Styles */
+.main-header {
+    position: relative;
+    z-index: 1000;
+}
+.navbar {
+    background: rgba(15, 15, 35, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.navbar.scrolled {
+    background: rgba(8, 8, 26, 0.98);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-brand {
+    font-family: 'Orbitron', monospace;
+    font-weight: 900;
+    font-size: 1.5rem;
+    color: var(--text-light) !important;
+    transition: all 0.3s ease;
+}
+
+.navbar-brand:hover {
+    transform: scale(1.05);
+}
+
+.brand-text {
+    background: var(--gradient-secondary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.navbar-brand i {
+    color: var(--primary-color);
+    font-size: 1.3rem;
+    animation: float 3s ease-in-out infinite;
+}
+
+.navbar-nav .nav-link {
+    color: var(--text-light) !important;
+    font-weight: 500;
+    margin: 0 10px;
+    padding: 8px 16px !important;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--accent-color) !important;
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+}
+
+.navbar-nav .nav-link.active {
+    background: var(--gradient-primary);
+    color: var(--text-light) !important;
+}
+
+.navbar-nav .nav-link i {
+    transition: all 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover i {
+    transform: scale(1.2);
+}
+
+.navbar-toggler {
+    border: none;
+    padding: 0.25rem 0.5rem;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.8%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='m4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* Responsive Navbar */
+@media (max-width: 991.98px) {
+    .navbar-collapse {
+        background: rgba(8, 8, 26, 0.95);
+        margin-top: 15px;
+        border-radius: 15px;
+        padding: 20px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .navbar-nav .nav-link {
+        margin: 5px 0;
+        text-align: center;
+    }
+    
+    .navbar-brand {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
+    
+    .navbar-brand i {
+        font-size: 1.1rem;
+    }
+}
