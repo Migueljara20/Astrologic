@@ -27,7 +27,9 @@ SECRET_KEY = 'django-insecure-wzd*b)90v(kbq1y$+9yak3@(uplc^zm-j*nzpm+1pmdh8!zi8r
 DEBUG = True
 
 ALLOWED_HOSTS = [".railway.app", "localhost", "127.0.0.1"]
-
+CSRF_TRUSTED_ORIGINS = [
+    'astrologic-production.up.railway.app'
+]
 
 # Application definition
 
@@ -123,6 +125,7 @@ STATIC_URL = 'static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),  # Para archivos globales
 ]
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
